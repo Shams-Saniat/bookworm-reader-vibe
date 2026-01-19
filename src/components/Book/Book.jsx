@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Book = ({ book }) => {
 
-    const { bookId, image, bookName, author, tags, category, rating } = book;
+    const { bookId, image, bookName, author, tags, category, rating, totalPages } = book;
 
     return (
         <Link to={`/books/${bookId}`}>
@@ -30,12 +30,12 @@ const Book = ({ book }) => {
                         <div className="divider"></div>
                         <div className="card-actions justify-between">
                             <div className="badge ">{category}</div>
-                            <div>
-                                <div className="badge">{rating}</div>
+                            <div>{rating}</div>
+                            <div>{totalPages}</div>       
                                 <div className="rating">
-                                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" aria-label="1 star" />
+                                    <input type="radio" name="rating-4" className="mask mask-star-2 bg-green-500" aria-label="1 star" />
                                 </div>
-                            </div>
+                            
                         </div>
                     </div>
                 </div>
